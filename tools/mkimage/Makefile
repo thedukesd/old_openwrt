@@ -29,9 +29,7 @@ define Host/Prepare
 endef
 
 define Host/Compile
-	$(MAKE) -C $(HOST_BUILD_DIR) \
-		HOSTLDFLAGS="$(HOST_STATIC_LINKING)" \
-		tools-only
+	$(MAKE) -C $(HOST_BUILD_DIR) tools-only
 endef
 
 define Host/Install
